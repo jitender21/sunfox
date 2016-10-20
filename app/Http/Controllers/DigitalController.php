@@ -24,13 +24,13 @@ class DigitalController extends Controller
     {
       $this->validate($request,[
         'firstname' => 'required|max:255',
+        'description'=>'required',
         'address'  =>  'required'
       ]);
       $digital= Digital::firstOrCreate(array('id' =>$request->id));
       $digital->firstname=$request->firstname;
-      $digital->descrition=$request->descrition;
+      $digital->description=$request->description;
       $digital->address=$request->address;
-
       $digital->save();
       return redirect('/digital');
     }

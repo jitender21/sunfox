@@ -12,7 +12,7 @@ class CreateDigitalTable extends Migration
      */
     public function up()
     {
-        Schema::create('digitals',function(Blueprint $table){
+        Schema::create('digitals', function (Blueprint $table){
           $table->increments('id');
           $table->string('firstname');
           $table->longText('description');

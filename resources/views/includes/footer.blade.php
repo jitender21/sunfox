@@ -1,5 +1,5 @@
 <div class="footer">
     <div>
-        <strong>Copyright</strong> SUNFOX &copy; 2014-2015
+        <strong>Copyright</strong> SUNFOX &copy; 2016-2017
     </div>
 </div>

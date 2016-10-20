@@ -21,3 +21,5 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::Controller('sunfox','SunfoxController');
 Route::Controller('digital','DigitalController');
+Route::Controller('manage','ManageController');
+Route::Controller('profile','ProfileController');

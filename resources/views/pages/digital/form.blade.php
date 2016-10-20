@@ -22,22 +22,21 @@
         <div class="form-group">
             <label class="col-sm-2 control-label">Firstname</label>
             <div class="col-sm-10">
-                <input type="text" name="firstname" required value="{{isset($digital)? $digital->firstname :''}}" class="form-control">
+                <input type="text" name="firstname" required value="{{isset($digital)?$digital->firstname:''}}" class="form-control">
             </div>
         </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">Description</label>
             <div class="col-sm-10">
-        <textarea  type="text" class="form-control"  name="description" required  >{{isset($digital)? $digital->description :''}}
-        </textarea>
+        <textarea  type="text" class="form-control"  name="description" required>{{isset($digital)?trim($digital->description):''}}</textarea>
         </div>
       </div>
 
         <div class="form-group">
             <label class="col-sm-2 control-label">Address</label>
             <div class="col-sm-10">
-                <input type="text" name="address" required value="{{isset($digital)? $digital->address :''}}" class="form-control">
+                <input type="text" name="address" required value="{{isset($digital)?$digital->address:''}}" class="form-control">
             </div>
         </div>
 
