@@ -4,7 +4,7 @@
    <ul class="nav metismenu" id="side-menu">
        <li class="nav-header">
            <div class="dropdown profile-element"><span>
-                            <img alt="image" class="img-circle" src="assets/img/avatar4.jpg" />
+                            <img alt="image" class="img-circle" src="/uploads/profile/{{Auth::user()->profile_image}}" />
                              </span>
                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                    <span class="clear"><span class="block m-t-xs"> <strong class="font-bold"><h1>SUNFOX</h1></strong>

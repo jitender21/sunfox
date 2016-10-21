@@ -16,8 +16,12 @@
                 @include('pages.profile.form')
             </div>
             <div class="col-lg-6">
-                @include('pages.profile.change_password')
+                @include('pages.profile.password')
             </div>
+        </div>
+        <hr>
+        <div class="row">
+            @include('pages.profile.image')
         </div>
     </div>
 </div>

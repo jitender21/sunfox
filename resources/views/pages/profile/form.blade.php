@@ -5,7 +5,7 @@
     <div class="ibox-content">
         <div class="row">
             <div class="col-sm-12">
-                <form role="form" method="POST" action="/profile/store">
+                <form role="form" method="POST" action="/profile/store" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <input type="hidden" name="id" value={{Auth::id()}}>
                     <div class="form-group">
@@ -14,6 +14,7 @@
                         <span class="help-block">
                             <strong>{{ $errors->first('name') }}</strong>
                         </span> @endif
+
                     </div>
                     <div class="form-group">
                         <label>Email</label>

@@ -39,7 +39,6 @@ class ProfileController extends Controller
         $profile = Auth::user();
         $profile->name = $request->name;
         $profile->email = $request->email;
-
         $profile->save();
         return Redirect('profile');
     }
@@ -60,5 +59,33 @@ class ProfileController extends Controller
       $profile->save();
       return Redirect('profile');
     }
+
+    public function postProfileimage(Request $request){
+        $image = User::find($request->id);
+
+        if($image){
+            $profile = $this->profileImage($request);
+            $image->profile_image = $profile;
+            $image->save();
+            $request->session()->flash('notification', ['type'=>'success','message'=>'Logo Successfully Update!']);
+        }
+        return Redirect('/profile');
+     }
+
+     private function profileImage($request){
+
+           $userId=Auth::user()->id;
+           $fileName = "";
+           $unique_id=uniqid();
+           if($request->hasFile('profile_image')){
+               $file = $request->file('profile_image');
+               $fileName = $unique_id.'.'.$file->getClientOriginalExtension();
+               $getImageReponse =  \Image::make($file);
+               $getImageReponse->resize(80, 80)->save('uploads/profile/'.$fileName);
+               $getImageReponse->save('uploads/profile/'.$fileName);
+           }
+         return $fileName;
+     }
+
 
 }
