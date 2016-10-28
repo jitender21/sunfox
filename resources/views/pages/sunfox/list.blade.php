@@ -2,16 +2,23 @@
     <thead>
         <tr>
             <th>#</th>
+            <th><input type="checkbox" class="checkedAll" ></th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Address</th>
             <th>Action</th>
         </tr>
     </thead>
+    <form action="/sunfox/alldelete" method="POST" id='deleteform'>
+      {{csrf_field()}}
+
     <tbody>
-        {{--*/$i=1;/*--}}  @foreach($sunfoxs as $sunfox)
-        <tr>
+        {{--*/$i=1;/*--}}
+         @foreach($sunfoxs as $sunfox)
+        <tr >
             <td>{{$i++}}</td>
+            <td><input type="checkbox"  name="ids[]" value="{{$sunfox->id}}"></td>
+
             <td>{{$sunfox->firstname}}</td>
             <td>{{$sunfox->lastname}}</td>
             <td>{{$sunfox->address}}</td>
@@ -23,6 +30,7 @@
         </tr>
         @endforeach
     </tbody>
+  </form>
 </table>
 {{ $sunfoxs->links() }}
 <!-- pagenation -->
