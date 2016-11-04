@@ -1,7 +1,7 @@
 <div class="col-sm-6">
     <form role="form" method="post" action="/profile/profileimage" enctype="multipart/form-data">
         {{csrf_field()}}
-      <input type="hidden" name="id" value="{{Auth::user()->id}}"/>
+      <input type="hidden" name="id" value="{{Auth::user()->id}}">
       <div class="form-group"><label>@if(Auth::user()->role=='user') Logo @else Upload Profile Picture @endif</label></div>
       <div>
         @if(Auth::user()->profile_image && file_exists('uploads/profile/'.Auth::user()->profile_image))

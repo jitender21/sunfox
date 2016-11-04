@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Sunfox;
+use App\Post;
+use Validator;
 
 class SunfoxController extends Controller
 {
@@ -46,6 +48,23 @@ public function getDelete($id)
 {
  $sunfox = Sunfox::find($id)->delete();
     return back();
+}
+public function postAlldelete(Request $request)
+{
+ $validate = Validator::make($request->all(),[
+   'ids'    => 'required',
+ ]);
+ if($validate->fails())
+ {
+   return back()->withErrors($validate)->withInput();
+ }
+  foreach($request->ids as $id)
+  {
+  $sunfox = Sunfox::find($id)->delete();
+
+  }
+  return back();
+
 }
 
 }

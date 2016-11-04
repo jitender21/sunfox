@@ -19,6 +19,8 @@
            <li><a href="/sunfox"><i class="fa fa-th-large"></i>Sunfox</a></li>
            <li><a href="/digital"><i class="fa fa-diamond"></i>Digital</a></li>
            <li><a href="/manage"><i class="fa fa-pie-chart"></i>Manage</a></li>
+           <li><a href="/poster"><i class="fa fa-globe"></i>Poster</a></li>
+           <li><a href="/agile"><i class="fa fa-bars"></i>Agile</a></li>
        </li>
      </ul>
    </div>

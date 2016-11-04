@@ -67,6 +67,8 @@ class ProfileController extends Controller
             $profile = $this->profileImage($request);
             $image->profile_image = $profile;
             $image->save();
+
+
             $request->session()->flash('notification', ['type'=>'success','message'=>'Logo Successfully Update!']);
         }
         return Redirect('/profile');
