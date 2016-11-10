@@ -24,4 +24,4 @@ Route::Controller('digital','DigitalController');
 Route::Controller('manage','ManageController');
 Route::Controller('profile','ProfileController');
 Route::Controller('poster','PosterController');
-Route::Controller('agile','AgileController');
+Route::Controller('agileboard','AgileboardController');

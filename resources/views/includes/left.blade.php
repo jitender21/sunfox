@@ -20,7 +20,7 @@
            <li><a href="/digital"><i class="fa fa-diamond"></i>Digital</a></li>
            <li><a href="/manage"><i class="fa fa-pie-chart"></i>Manage</a></li>
            <li><a href="/poster"><i class="fa fa-globe"></i>Poster</a></li>
-           <li><a href="/agile"><i class="fa fa-bars"></i>Agile</a></li>
+           <li><a href="/agileboard"><i class="fa fa-bars"></i>Agileboard</a></li>
        </li>
      </ul>
    </div>
